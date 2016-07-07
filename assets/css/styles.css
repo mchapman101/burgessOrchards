@@ -8,7 +8,102 @@ www.markalanchapman.com
 /***General Styles ***/
 
 * {
-  font-size: 1.3em;
+  /*font-size: 1.3em;*/
 }
 
-/*** Header Styles ***/
+body {
+  /*padding: 0 50px 0 50px;*/
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+
+/*-----------------Header Styles -----------------*/
+
+.header-container {
+width: 100%;
+display: flex;
+justify-content: center;
+flex-direction: row;
+flex-wrap: nowrap;
+align-items: stretch;
+color: white;
+margin-bottom: 30px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  height: 150px;
+  flex-grow: 1;
+  width: 30%;
+}
+
+#logo {
+  display: block;
+  width: 430px;
+  height: 150px;
+  padding-left: 20px;
+  margin-left: 60px;
+ background: url(/assets/img/burgess_orchards_logo-01.png) 0 0 no-repeat;
+ background-size: 100%;
+}
+
+.call-to-action-container {
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #FF6633;
+  color: #FFF;
+  padding: 10px;
+}
+
+#call-to-action {
+  font-size: 2.5em;
+  letter-spacing: 4px;
+  text-align: center;
+  background: rgba(255, 102, 51, 0.15);
+}
+
+
+#call-to-action>a {
+  color: white;
+}
+
+/*-----------------NavTab Styles -----------------*/
+
+.navtab-container {
+  color: red;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;;
+  align-items: center;
+  align-content: stretch;
+  font-size: 2.2em;
+  margin-bottom: 40px;
+}
+
+.navtab {
+  padding: 10px;
+  width: 16%;
+  margin: 0 30px 0 30px;
+  color: rgba(51, 153, 102, 0.5);
+  text-align: center;
+}
+
+.activeState {
+  color: #339966;
+  border-bottom: 10px solid #339966
+}
