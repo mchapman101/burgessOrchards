@@ -19,6 +19,19 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+color: #339966;
+text-decoration: none;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+a:visited {
+  color: none;
+}
+
 ul, ol {
   list-style: none;
 }
@@ -42,7 +55,6 @@ margin-bottom: 30px;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  height: 150px;
   flex-grow: 1;
   width: 30%;
 }
@@ -50,7 +62,6 @@ margin-bottom: 30px;
 #logo {
   display: block;
   width: 430px;
-  height: 150px;
   padding-left: 20px;
   margin-left: 60px;
  background: url(/assets/img/burgess_orchards_logo-01.png) 0 0 no-repeat;
@@ -71,7 +82,7 @@ margin-bottom: 30px;
 }
 
 #call-to-action {
-  font-size: 2.5em;
+  font-size: 1.3em;
   letter-spacing: 4px;
   text-align: center;
   background: rgba(255, 102, 51, 0.15);
@@ -106,4 +117,27 @@ margin-bottom: 30px;
 .activeState {
   color: #339966;
   border-bottom: 10px solid #339966
+}
+
+/*---------------Home View-------------------*/
+
+.carousel {
+
+}
+
+.intro-container {
+  padding: 0 40px 0 40px;
+}
+
+.intro {
+ text-align: center;
+ margin-bottom: 40px;
+}
+
+.intro>h1 {
+  font-size: 7.0em;
+
+}
+
+.intro-body {
 }
