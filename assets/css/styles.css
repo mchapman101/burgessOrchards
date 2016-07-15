@@ -36,6 +36,10 @@ ul, ol {
   list-style: none;
 }
 
+.nav, .pagination, .carousel, .panel-title a {
+  cursor: pointer;
+ }
+
 
 /*-----------------Header Styles -----------------*/
 
@@ -91,4 +95,20 @@ width: 100%
 }
 
 .intro-body {
+}
+
+/*---------------Footer------------------*/
+
+.footer {
+  background-color: #339966;
+  color: white;
+  padding-top: 30px;
+}
+
+.social-links {
+  margin-bottom: 20px;
+}
+
+.copyright {
+  margin-top: 20px;
 }
