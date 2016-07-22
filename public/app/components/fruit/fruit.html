@@ -1,16 +1,26 @@
 <section class="container">
-  <div class="fruit-header">
-    <h1 class="text-center">This is about Fruit!</h1>
-  </div>
+    <div class="fruit-header">
+    </div>
 
-<div class="row">
-  <a ui-sref="fruit.peaches">PEACHES!</a>
-  <a ui-sref="fruit.apples">APPLES!</a>
-  <a ui-sref="fruit.others">OTHERS!</a>
+    <div class="row fruit-nav">
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+
+            <div class="btn-group" role="group">
+                <button type="button" class="btn" ui-sref="fruit.peaches">PEACHES!</button>
+            </div>
+
+            <div class="btn-group" role="group">
+                <button type="button" class="btn" ui-sref="fruit.apples">APPLES!</button>
+            </div>
+
+            <div class="btn-group" role="group">
+                <button type="button" class="btn" ui-sref="fruit.others">OTHERS!</button>
+            </div>
+
+        </div>
+    </div>
 
 
-</div>
-
-<ui-view><ui-view>
+    <ui-view></ui-view>
 
 </section>
