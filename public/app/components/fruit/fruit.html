@@ -2,24 +2,14 @@
     <div class="fruit-header">
     </div>
 
-    <div class="row fruit-nav">
-        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+    <uib-tabset active="activePeaches" justified="true">
+        <uib-tab index="0" heading="Peaches" ui-sref="fruit.peaches" class="lead"></uib-tab>
 
-            <div class="btn-group" role="group">
-                <button type="button" class="btn" ui-sref="fruit.peaches">PEACHES!</button>
-            </div>
+        <uib-tab index="1" heading="Apples" ui-sref="fruit.apples" class="lead"></uib-tab>
 
-            <div class="btn-group" role="group">
-                <button type="button" class="btn" ui-sref="fruit.apples">APPLES!</button>
-            </div>
+        <uib-tab index="2" heading="Other Fruit" ui-sref="fruit.others" class="lead"></uib-tab>
 
-            <div class="btn-group" role="group">
-                <button type="button" class="btn" ui-sref="fruit.others">OTHERS!</button>
-            </div>
-
-        </div>
-    </div>
-
+      </uib-tabset>
 
     <ui-view></ui-view>
 

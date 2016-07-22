@@ -43,6 +43,11 @@ ul, ol {
 
 /*-----------------Header Styles -----------------*/
 
+.logo {
+  max-height: 150px;
+}
+
+
 
 .call-to-action {
   text-transform: uppercase;
@@ -93,6 +98,32 @@ width: 100%
   margin-bottom: 30px;
 }
 
+.fruit-panel {
+  min-height: 566px;
+  overflow: auto;
+}
+
+.fruit-panel-body {
+  min-height: 300px;
+}
+
+.fruit-img {
+  margin: auto;
+}
+
+.fruit-btn-container {
+  display: flex;
+}
+
+.fruit-btn {
+  position: absolute;
+  bottom: 35px;
+}
+
+.fruitActiveState {
+  color: red;
+}
+
 
 /*---------------Footer------------------*/
 
@@ -109,3 +140,24 @@ width: 100%
 .copyright {
   margin-top: 20px;
 }
+
+/*.flex, .flex > div[class*='col-'] {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex:1 0 auto;
+}
+
+.panel {
+   display: flex;
+   flex-direction: column;;
+   align-content:stretch;
+}
+
+.panel-body {
+   display: flex;
+   flex-direction: column;
+   flex-grow:1;
+}*/

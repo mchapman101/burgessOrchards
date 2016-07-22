@@ -45,11 +45,6 @@ angular.module("burgessOrchards").config(function($stateProvider, $urlRouterProv
       templateUrl: 'public/app/components/recipies/recipies.html',
       controller: 'recipiesCtrl'
     })
-    .state('signup', {
-      url: '/signup',
-      templateUrl: 'public/app/components/signup/signupTmpl.html',
-      controller: 'signupCtrl'
-    });
 
 
   // ASSIGN OTHERWISE
