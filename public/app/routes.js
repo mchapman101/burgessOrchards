@@ -39,12 +39,36 @@ angular.module("burgessOrchards").config(function($stateProvider, $urlRouterProv
           templateUrl: 'public/app/components/fruit/others/others.html',
           controller: 'othersCtrl'
         })
+//------End Nested Views ---//
 
     .state('recipies', {
       url: '/recipies',
       templateUrl: 'public/app/components/recipies/recipies.html',
       controller: 'recipiesCtrl'
     })
+    .state('admin', {
+      url: '/admin',
+      templateUrl: 'public/app/components/admin/admin.html',
+      controller: 'adminCtrl'
+    })
+
+    //  STATE
+    .state('admin.email', {
+      url: '/email',
+      templateUrl: 'public/app/components/admin/email/email.html',
+      controller: 'emailCtrl'
+    })
+    .state('admin.products', {
+      url: '/products',
+      templateUrl: 'public/app/components/admin/products/products.html',
+      controller: 'emailCtrl'
+    });
+
+
+
+
+
+    ;
 
 
   // ASSIGN OTHERWISE

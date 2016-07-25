@@ -77,7 +77,13 @@ ul, ol {
 /*---------------Home View-------------------*/
 
 .carousel {
-width: 100%
+max-height: 60vh;
+overflow: hidden;
+}
+
+.carouselImg {
+  width: 100%;
+  height: auto;
 }
 
 .intro-container {
@@ -91,6 +97,9 @@ width: 100%
 
 .intro-body {
 }
+
+/*-----carousel flash fix -----*/
+
 
 /*---------------Fruit View------------------*/
 

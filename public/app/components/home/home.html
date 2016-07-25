@@ -3,8 +3,8 @@
   <div class="row">
     <div class = "carousel col-lg-12" >
       <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-        <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-          <img ng-src="{{slide.image}}" class="img-responsive center-block">
+        <uib-slide ng-repeat="slide in slides " index="$index">
+          <img ng-src="{{slide.image}}" class="img-responsive center-block carouselImg">
           <div class="carousel-caption">
             <p>{{slide.text}}</p>
           </div>
