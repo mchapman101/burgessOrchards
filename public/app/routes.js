@@ -61,7 +61,7 @@ angular.module("burgessOrchards").config(function($stateProvider, $urlRouterProv
     .state('admin.products', {
       url: '/products',
       templateUrl: 'public/app/components/admin/products/products.html',
-      controller: 'emailCtrl'
+      controller: 'productsCtrl'
     });
 
 

@@ -4,7 +4,7 @@ angular.module("burgessOrchards").controller("headerCtrl", function($scope, $uib
 
     $scope.animationsEnabled = true;
 
-    $scope.open = function (size) {
+    $scope.openSignup = function (size) {
 
       var modalInstance = $uibModal.open({
         animation: $scope.animationsEnabled,
