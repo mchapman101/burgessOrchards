@@ -86,18 +86,13 @@ overflow: hidden;
   height: auto;
 }
 
-.intro-container {
-  /*padding: 0 40px 0 40px;*/
+.bg-grey {
+  background-color: #EEEEEE;
 }
 
-.intro {
- /*text-align: center;
- margin-bottom: 40px;*/
+#map {
+  height:420px;
 }
-
-.intro-body {
-}
-
 /*-----carousel flash fix -----*/
 
 

@@ -5,7 +5,7 @@ angular.module("burgessOrchards").controller("homeCtrl", function($scope) {
   // VARIABLES
   // ============================================================
 
-  $scope.myInterval = 6000;
+  $scope.myInterval = 60000;
     $scope.noWrapSlides = false;
     $scope.active = 0;
     var slides = $scope.slides = [
