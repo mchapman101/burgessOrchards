@@ -8,7 +8,7 @@ angular.module("burgessOrchards").controller("headerCtrl", function($scope, $uib
 
       var modalInstance = $uibModal.open({
         animation: $scope.animationsEnabled,
-        templateUrl: 'public/app/shared/signup/signupTmpl.html',
+        templateUrl: '/app/shared/signup/signupTmpl.html',
         controller: 'signupCtrl',
         size: size,
         resolve: {

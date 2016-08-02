@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 
 // CONTROLLERS
 // ============================================================
-var modelCtrl = require('./controllers/modelCtrl');
+// var modelCtrl = require('./backendCtrl/modelCtrl');
 
 // INITILIZE APP
 // ============================================================
@@ -17,18 +17,20 @@ var app = express();
 // ============================================================
 app.use(cors());
 app.use(bodyParser.json());
+app.use(express.static(__dirname+'./../public'));
+
 
 // ENDPOINTS
 // ============================================================
 // MODEL ENDPOINTS
-app.get('/model', modelCtrl.read);
-app.post('/model', modelCtrl.create);
-app.put('/model/:id', modelCtrl.update);
-app.delete('/model/:id', modelCtrl.delete);
+// app.get('/model', modelCtrl.read);
+// app.post('/model', modelCtrl.create);
+// app.put('/model/:id', modelCtrl.update);
+// app.delete('/model/:id', modelCtrl.delete);
 
 // VARIABLES
 // ============================================================
-var port = 3000;
+var port = 4000;
 var mongoURI = 'mongodb://localhost:27017/DBName';
 
 // MONGO CONNECTION

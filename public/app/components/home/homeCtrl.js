@@ -10,19 +10,19 @@ angular.module("burgessOrchards").controller("homeCtrl", function($scope) {
     $scope.active = 0;
     var slides = $scope.slides = [
       {
-        image: "assets/img/carousel/01.jpg",
+        image: "../assets/img/carousel/01.jpg",
         id: "01"
       },
       {
-        image: "assets/img/carousel/02.jpg",
+        image: "../assets/img/carousel/02.jpg",
         id: "02"
       },
       {
-        image: "assets/img/carousel/03.jpg",
+        image: "../assets/img/carousel/03.jpg",
         id: "03"
       },
       {
-        image: "assets/img/carousel/04.jpg",
+        image: "../assets/img/carousel/04.jpg",
         id: "04"
       },
     ];

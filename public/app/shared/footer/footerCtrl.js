@@ -6,7 +6,7 @@ angular.module("burgessOrchards").controller("footerCtrl", function($scope, $uib
 
       var modalInstance = $uibModal.open({
         animation: $scope.animationsEnabled,
-        templateUrl: 'public/app/shared/login/login.html',
+        templateUrl: '/app/shared/login/login.html',
         controller: 'loginCtrl',
         size: size,
         resolve: {

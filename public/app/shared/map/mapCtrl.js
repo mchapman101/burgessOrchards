@@ -16,6 +16,17 @@ var markers= [];
           mapTypeId: google.maps.MapTypeId.ROADMAP,
           draggable: false,
           scrollwheel: false,
+          styles: [
+  {
+    "featureType": "landscape",
+    "stylers": [
+      { "color": "#DCEDC8" },
+      { "weight": 0.1 }
+      // { "saturation": -47 },
+      // { "lightness": 73 }
+    ]
+  }
+]
       }
 
       $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
