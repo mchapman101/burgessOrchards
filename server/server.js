@@ -3,7 +3,8 @@
 var express = require('express');
 var cors = require('cors');
 var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
+var massive = require('massive');
+// var db = massive.comnnectSync({db :})
 
 // CONTROLLERS
 // ============================================================
@@ -31,15 +32,9 @@ app.use(express.static(__dirname+'./../public'));
 // VARIABLES
 // ============================================================
 var port = 4000;
-var mongoURI = 'mongodb://localhost:27017/DBName';
 
 // MONGO CONNECTION
 // ============================================================
-mongoose.set('debug', true);
-mongoose.connect(mongoURI);
-mongoose.connection.once('open', function() {
-  console.log('Connected to mongo at: ', mongoURI);
-});
 
 // LISTEN
 // ============================================================
