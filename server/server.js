@@ -4,11 +4,12 @@ var express = require('express');
 var cors = require('cors');
 var bodyParser = require('body-parser');
 var massive = require('massive');
-// var db = massive.comnnectSync({db :})
+var db = massive.connectSync({db : 'burgessorchards'})
 
 // CONTROLLERS
 // ============================================================
-// var modelCtrl = require('./backendCtrl/modelCtrl');
+var fruitCtrl = require('./backendCtrls/fruitCtrl');
+
 
 // INITILIZE APP
 // ============================================================
@@ -24,10 +25,18 @@ app.use(express.static(__dirname+'./../public'));
 // ENDPOINTS
 // ============================================================
 // MODEL ENDPOINTS
-// app.get('/model', modelCtrl.read);
-// app.post('/model', modelCtrl.create);
-// app.put('/model/:id', modelCtrl.update);
-// app.delete('/model/:id', modelCtrl.delete);
+app.get('/fruit', function(req, res) {
+  db.get_all_fruit(function(err, fruit){
+  res.send(fruit);
+  })
+});
+
+
+
+// app.get('/fruit', fruitCtrl.read);
+// app.post('/fruit', fruitCtrl.create);
+// app.put('/fruit/:id', fruitCtrl.update);
+// app.delete('/fruit/:id', fruitCtrl.delete);
 
 // VARIABLES
 // ============================================================
