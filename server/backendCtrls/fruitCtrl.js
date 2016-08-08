@@ -1,5 +1,5 @@
 var Massive = require('massive');
-var db = Massive.connectSync({db : 'burgessorchards'})
+var db = Massive.connectSync({db : 'burgessorchards'});
 
 // EXPORT METHODS
 // ============================================================
@@ -9,6 +9,22 @@ module.exports = {
   // ============================================================
   read: function(req, res) {
     db.get_all_fruit(function(err, result) {
+      if (err) {
+        res.status(500).send(err);
+      }
+      res.status(200).send(result);
+    });
+  },
+  peach: function(req, res) {
+    db.get_all_peaches(function(err, result) {
+      if (err) {
+        res.status(500).send(err);
+      }
+      res.status(200).send(result);
+    });
+  },
+  apple: function(req, res) {
+    db.get_all_apples(function(err, result) {
       if (err) {
         res.status(500).send(err);
       }

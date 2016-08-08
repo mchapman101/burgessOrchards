@@ -1,6 +1,6 @@
 // INITILIZE CONTROLLER
 // ============================================================
-angular.module("burgessOrchards").controller("applesCtrl", function($scope) {
+angular.module("burgessOrchards").controller("applesCtrl", function($scope, fruitService) {
 
   // VARIABLES
   // ============================================================
@@ -8,6 +8,15 @@ angular.module("burgessOrchards").controller("applesCtrl", function($scope) {
 
   // FUNCTIONS
   // ============================================================
+
+  $scope.getAllApples = function(){
+    fruitService.getAllApples().then(function(response){
+      console.log(response, "hit1");
+      $scope.fruits = response.data;
+    });
+  };
+
+  $scope.getAllApples();
 
 
 });

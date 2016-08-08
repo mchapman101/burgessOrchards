@@ -1,6 +1,6 @@
 // INITILIZE CONTROLLER
 // ============================================================
-angular.module("burgessOrchards").controller("peachesCtrl", function($scope) {
+angular.module("burgessOrchards").controller("peachesCtrl", function($scope, fruitService) {
 
   // VARIABLES
   // ============================================================
@@ -9,5 +9,13 @@ angular.module("burgessOrchards").controller("peachesCtrl", function($scope) {
   // FUNCTIONS
   // ============================================================
 
+$scope.getAllPeaches = function(){
+  fruitService.getAllPeaches().then(function(response){
+    console.log(response, "hit1");
+    $scope.fruits = response.data;
+  });
+};
+
+$scope.getAllPeaches();
 
 });

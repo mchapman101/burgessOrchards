@@ -7,47 +7,17 @@
 </p>
 
 
-<div class="col-xs-12 col-sm-6">
-  <div class="panel panel-default fruit-panel ">
-   <div class="panel-heading"><img class="img-responsive fruit-img"src="assets/img/apples.jpg" alt="" /></div>
-   <div class="panel-body fruit-panel-body">
-     <h3>Gala</h3>
-     <p>Pinkish-orange stripes over a yellow background for this crisp, sweet apple. Snacking and salads are primary uses. Gala harvest begins in the middle of August and lasts until November in cold storage.</p>
+<section class="container">
+  <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="fruit in fruits">
+    <div class="panel panel-default fruit-panel ">
+     <div class="panel-heading"><img class="img-responsive fruit-img"ng-src="assets/img/{{fruit.img}}" alt="" /></div>
+     <div class="panel-body fruit-panel-body" >
+       <h3>{{fruit.name}}</h3>
+       <p>{{fruit.description}}</p>
+     </div>
+     <div class="panel-footer"><button class="btn btn-lg btn-primary btn-block">Button</button></div>
    </div>
-   <div class="panel-footer"><button class="btn btn-lg btn-primary btn-block">Button</button></div>
- </div>
-</div><!--/col-->
+  </div><!--/col-->
+</section>
 
-<div class="col-xs-12 col-sm-6">
-  <div class="panel panel-default fruit-panel ">
-   <div class="panel-heading"><img class="img-responsive fruit-img"src="assets/img/apples.jpg" alt="" /></div>
-   <div class="panel-body fruit-panel-body">
-     <h3>Honeycrisp</h3>
-     <p>Developed by the University of Minnesota, a sweet yet slightly tart flavor, this variety of apple is great for salads, baking, cooking or eating as a snack. The Honeycrisp Apple grows well in Alpine. It is a variety that stores well. Honeycrisp is in high demand from out customers.</p>
-   </div>
-   <div class="panel-footer"><button class="btn btn-lg btn-primary btn-block">Button</button></div>
- </div>
-</div><!--/col-->
-
-<div class="col-xs-12 col-sm-6">
-  <div class="panel panel-default fruit-panel ">
-   <div class="panel-heading"><img class="img-responsive fruit-img"src="assets/img/apples.jpg" alt="" /></div>
-   <div class="panel-body fruit-panel-body">
-     <h3>Jonagold</h3>
-     <p>A cross between a Jonathon and a Golden Delicious apple is great for eating, baking and cooking.</p>
-   </div>
-   <div class="panel-footer"><button class="btn btn-lg btn-primary btn-block">Button</button></div>
- </div>
-</div><!--/col-->
-
-<div class="col-xs-12 col-sm-6">
-  <div class="panel panel-default fruit-panel ">
-   <div class="panel-heading"><img class="img-responsive fruit-img"src="assets/img/apples.jpg" alt="" /></div>
-   <div class="panel-body fruit-panel-body">
-     <h3>Fuji</h3>
-     <p>This flavorful variety was introduced to the U.S. from Japan in the 1980s, but now the U.S. produces more Fujis than Japan. It’s excellent for baking and salads. Utah’s cool weather in the late fall helps develop its reddish-pink color and excellent flavor. Fujis are harvested in October and can be purchased October to December.</p>
-   </div>
-   <div class="panel-footer"><button class="btn btn-lg btn-primary btn-block">Button</button></div>
- </div>
-</div><!--/col-->
 </div>
