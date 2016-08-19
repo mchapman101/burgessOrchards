@@ -1,1 +1,3 @@
-SELECT * FROM fruit WHERE type = 'peach';
+SELECT *
+FROM fruit
+WHERE type = 'peach';

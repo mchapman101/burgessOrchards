@@ -2,28 +2,28 @@
     <h1 class="lead">This is the EMAIL page</h1>
 
 
-<div class="row email-search">
+    <div class="row email-search">
 
-    <div class="input-group input-group-lg col-xs-12">
-      <span class="input-group-addon">?</span>
-      <input type="text" name="search" value="" ng-model="emailFilter" class="form-control" placeholder="Search for...">
+        <div class="input-group input-group-lg col-xs-12">
+            <span class="input-group-addon">?</span>
+            <input type="text" name="search" value="" ng-model="emailFilter" class="form-control" placeholder="Search for...">
+
+        </div>
 
     </div>
 
-  </div>
 
-
-<div class="row">
+    <div class="row">
 
 
 
-    <div class="list-group col-md-6">
-      <div class="list-group-item" ng-repeat="email in emails | filter: emailFilter">
-      <h4 class="list-group-item-heading">{{email.firstName}} {{email.lastName}}</h4>
-      <p>{{email.email}}</p>
+        <div class="list-group col-md-6">
+            <div class="list-group-item" ng-repeat="email in emails | filter: emailFilter">
+                <h4 class="list-group-item-heading">{{email.firstName}} {{email.lastName}}</h4>
+                <p>{{email.email}}</p>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
 
 </section>
