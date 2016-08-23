@@ -55,6 +55,7 @@ ul, ol {
   background-color: #FF6633;
   color: #FFF;
   padding: 10px;
+  cursor: pointer;
 }
 
 
@@ -152,6 +153,14 @@ overflow: hidden;
 
 .social-links {
   margin-bottom: 20px;
+  margin: auto;
+}
+
+.fa {
+  color: white;
+  height: 40px;
+  width: 40px;
+  font-size: 29px;
 }
 
 .copyright {

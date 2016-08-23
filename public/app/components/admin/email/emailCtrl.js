@@ -5,7 +5,13 @@ angular.module("burgessOrchards").controller("emailCtrl", function($scope, email
   // VARIABLES
   // ============================================================
 
-$scope.emails = emailService.dummyData();
+$scope.getEmails = function(){
+  emailService.getContacts().then(function(response){
+    $scope.emails = response;
+  });
+};
+
+$scope.getEmails();
 
 
   // FUNCTIONS

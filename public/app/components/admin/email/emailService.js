@@ -32,21 +32,18 @@ this.dummyData = function(){
 
   // CRUD FUNCTIONS
   // ============================================================
-  this.getEmail = function(id) {
-    var query = "";
-    if (id) query = '?_id=' + id;
+  this.getContacts = function(id) {
     return $http({
       method: 'GET',
-      url: '/email' + query
+      url: '/contacts'
     }).then(function(response) {
-      if (response.data.length < 2) return response.data[0];
       return response.data;
     });
   };
   this.createEmail = function(email) {
     return $http({
       method: 'POST',
-      url: '/email',
+      url: '/contacts',
       data: email
     }).then(function(response) {
       return response;
