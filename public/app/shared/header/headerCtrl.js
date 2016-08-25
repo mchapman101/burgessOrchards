@@ -1,6 +1,6 @@
 // INITILIZE CONTROLLER
 // ============================================================
-angular.module("burgessOrchards").controller("headerCtrl", function($scope, $uibModal, $log) {
+angular.module("burgessOrchards").controller("headerCtrl", function($scope, $uibModal, $log, appAlert) {
 
     $scope.animationsEnabled = true;
 

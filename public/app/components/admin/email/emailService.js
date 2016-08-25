@@ -2,34 +2,6 @@
 // ============================================================
 angular.module("burgessOrchards").service("emailService", function($http) {
 
-var dummyData = [
-  {
-    firstName: "John",
-    lastName: "Smith",
-    email: "jsmith@aolol.com"
-  },
-  {
-    firstName: "Suzie",
-    lastName: "Jenkins",
-    email: "suziejenkins112@gooogle.com"
-  },
-  {
-    firstName: "Javier",
-    lastName: "Bavier",
-    email: "soLoco@cnnbc.com"
-  },
-  {
-    firstName: "Bob",
-    lastName: "Smith",
-    email: "bs@bs.com"
-  },
-]
-
-this.dummyData = function(){
-  return dummyData
-}
-
-
   // CRUD FUNCTIONS
   // ============================================================
   this.getContacts = function(id) {
@@ -49,19 +21,19 @@ this.dummyData = function(){
       return response;
     });
   };
-  this.editEmail = function(id, email) {
+  this.updateContact = function(id, email) {
     return $http({
       method: 'PUT',
-      url: "/email/" + id,
+      url: "/contacts/" + id,
       data: email
     }).then(function(response) {
       return response;
     });
   };
-  this.deleteEmail = function(id) {
+  this.deleteContact = function(id) {
     return $http({
       method: 'DELETE',
-      url: '/email/' + id
+      url: '/contacts/' + id
     }).then(function(response) {
       return response;
     });
