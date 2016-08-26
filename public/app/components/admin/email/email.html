@@ -12,19 +12,20 @@
 
 
     <div class="row">
+
         <div class="list-group col-md-6">
-            <div class="list-group-item" ng-repeat="email in emails | orderBy: 'lastname' | filter: emailFilter">
+            <div class="list-group-item form-group" ng-repeat="email in emails | orderBy: 'lastname' | filter: emailFilter">
               <form ng-submit="updateContact(email)">
                 <input type="text"
                 ng-model="email.firstname" class="list-group-item-heading"></input>
                 <input type="text" ng-model="email.lastname"></input>
-                <input type="text" ng-model="email.email"></input>
+                <input type="email" ng-model="email.email"></input>
                 <button type="button" class="btn btn-primary " ng-click="updateContact(email); updateAlert('success', 'Updated', '1000')">Update</button>
                 <button type="button" class="btn btn-danger " ng-click="deleteContact(email)" confirm="Are you sure?">Delete</button>
               </form>
-
             </div>
         </div>
+
     </div>
 
 

@@ -1,6 +1,6 @@
 // INITILIZE CONTROLLER
 // ============================================================
-angular.module("burgessOrchards").controller("adminCtrl", function($scope) {
+angular.module("burgessOrchards").controller("adminCtrl", function($scope, $state, $rootScope) {
 
   // VARIABLES
   // ============================================================
@@ -9,5 +9,11 @@ angular.module("burgessOrchards").controller("adminCtrl", function($scope) {
   // FUNCTIONS
   // ============================================================
 
+  $rootScope.$on('$stateChangeSuccess', function(event, toState) {
+      var aac;
+      if (aac = toState && toState.params && toState.params.autoActivateChild) {
+          $state.go(aac);
+      }
+  });
 
 });

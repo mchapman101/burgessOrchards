@@ -20,7 +20,10 @@ angular.module("burgessOrchards").config(function($stateProvider, $urlRouterProv
     .state('fruit', {
       url: '/fruit',
       templateUrl: 'app/components/fruit/fruit.html',
-      controller: 'fruitCtrl'
+      controller: 'fruitCtrl',
+      params: {
+        autoActivateChild: 'fruit.peaches'
+      }
     })
     //--Fruit Nested Views--//
 
@@ -46,13 +49,16 @@ angular.module("burgessOrchards").config(function($stateProvider, $urlRouterProv
       templateUrl: 'app/components/recipies/recipies.html',
       controller: 'recipiesCtrl'
     })
+
+//-------Admin Nested Vies ------//
     .state('admin', {
       url: '/admin',
       templateUrl: 'app/components/admin/admin.html',
-      controller: 'adminCtrl'
+      controller: 'adminCtrl',
+      params: {
+        autoActivateChild: 'admin.email'
+      }
     })
-
-    //  STATE
     .state('admin.email', {
       url: '/email',
       templateUrl: 'app/components/admin/email/email.html',
