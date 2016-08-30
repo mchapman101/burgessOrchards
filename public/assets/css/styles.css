@@ -141,6 +141,18 @@ overflow: hidden;
   margin-bottom: 1em;
 }
 
+.borderless {
+  border: none;
+  background: transparent;
+}
+
+.fruitDesc {
+  height: 200px !important;
+  resize: none;
+  border-style: none;
+  border-color: transparent;
+  overflow: auto;
+}
 
 
 /*---------------Footer------------------*/

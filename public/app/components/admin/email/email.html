@@ -1,6 +1,4 @@
 <section class="container">
-    <h1 class="lead">This is the EMAIL page</h1>
-
 
     <div class="row email-search">
 
@@ -16,10 +14,14 @@
         <div class="list-group col-md-6">
             <div class="list-group-item form-group" ng-repeat="email in emails | orderBy: 'lastname' | filter: emailFilter">
               <form ng-submit="updateContact(email)">
-                <input type="text"
-                ng-model="email.firstname" class="list-group-item-heading"></input>
-                <input type="text" ng-model="email.lastname"></input>
-                <input type="email" ng-model="email.email"></input>
+
+                <h3><input type="text"
+                ng-model="email.firstname" class="borderless"></input></h3>
+
+                <h3><input type="text" ng-model="email.lastname" class="borderless"></input></h3>
+
+                <h3><input type="email" ng-model="email.email" class="borderless"></input></h3>
+
                 <button type="button" class="btn btn-primary " ng-click="updateContact(email); updateAlert('success', 'Updated', '1000')">Update</button>
                 <button type="button" class="btn btn-danger " ng-click="deleteContact(email)" confirm="Are you sure?">Delete</button>
               </form>

@@ -6,6 +6,8 @@ angular.module("burgessOrchards").controller("fruitCtrl", function($scope, $stat
     // ============================================================
 
 
+
+
     // FUNCTIONS
     // ============================================================
     $rootScope.$on('$stateChangeSuccess', function(event, toState) {
@@ -14,4 +16,7 @@ angular.module("burgessOrchards").controller("fruitCtrl", function($scope, $stat
             $state.go(aac);
         }
     });
+
+
+
 });

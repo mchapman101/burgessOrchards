@@ -16,5 +16,16 @@ angular.module("burgessOrchards").controller("productsCtrl", function($scope, fr
   // FUNCTIONS
   // ============================================================
 
+  $scope.updateProduct = function(product){
+    fruitService.updateFruit(product.id, product).then(function(response){
+      $scope.getAllFruit();
+    });
+  };
+
+  $scope.deleteProduct = function(product){
+    fruitService.deleteFruit(product.id, product).then(function(response){
+      $scope.getAllFruit();
+    });
+  };
 
 });
