@@ -4,6 +4,16 @@ angular.module("burgessOrchards").service("fruitService", function($http) {
 
   // CRUD FUNCTIONS
   // ============================================================
+
+this.addFruit = function(fruit){
+  return $http({
+    method: 'POST',
+    url: '/fruit',
+    data: fruit
+  }).then(function(response){
+    return response;
+  });
+};
 this.getAllFruit = function(fruit){
   return $http({
       method: 'GET',
@@ -32,17 +42,6 @@ this.getAllFruit = function(fruit){
         });
       };
 
-  // this.getFruit = function(id) {
-  //   var query = "";
-  //   if (id) query = '?_id=' + id;
-  //   return $http({
-  //     method: 'GET',
-  //     url: '/fruit' + query
-  //   }).then(function(response) {
-  //     if (response.data.length < 2) return response.data[0];
-  //     return response.data;
-  //   });
-  // };
 
   this.updateFruit = function(id, fruit) {
     return $http({

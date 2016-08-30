@@ -1,0 +1,50 @@
+<section class="modal-body">
+
+
+<div class="modal-head">
+
+<p class="lead">Please Add The Product</p>
+</div>
+
+
+
+<div class="row">
+
+  <div>
+    <div class="panel panel-default fruit-panel ">
+     <div class="panel-heading"><img class="img-responsive fruit-img"ng-src="assets/img/peach.jpg" alt="" /></div>
+
+     <div class="panel-body fruit-panel-body form-group" >
+
+       <select class="form-control" name="Fruit Type" ng-model="fruit.type">
+        <option value="">-----Please Select -----</option>
+        <option value="peach">Peaches</option>
+        <option value="apple">Apples</option>
+        <option value="other">Other</option>
+
+       </select>
+
+       <h3><input type="text" ng-model="fruit.name" placeholder="Fruit Name"></h3></input>
+
+       <p><textarea class="form-control fruitDesc" ng-model="fruit.description" placeholder="Enter Description Here..." rows="6"></textarea></p>
+     </div>
+
+   </div>
+ </div>
+</div>
+
+
+
+
+
+  <button class="btn btn-lg btn-success" type="button" name="button" ng-click="addFruit(fruit)">Add Product</button>
+
+
+
+</form>
+
+
+
+
+
+</section>
