@@ -12,9 +12,10 @@
 
   <div>
     <div class="panel panel-default fruit-panel ">
-     <div class="panel-heading"><img class="img-responsive fruit-img"ng-src="assets/img/peach.jpg" alt="" /></div>
 
-     <div class="panel-body fruit-panel-body form-group" >
+      <label class="btn btn-primary btn-file">
+          Browse <input type="file" images="images" accept="image/*" fileread style="display: none;">
+      </label>     <div class="panel-body fruit-panel-body form-group" >
 
        <select class="form-control" name="Fruit Type" ng-model="fruit.type">
         <option value="">-----Please Select -----</option>
