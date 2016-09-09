@@ -1,6 +1,7 @@
 angular.module('burgessOrchards')
 .factory('imagesService', function ($http) {
   var service = {};
+
   service.storeImage = function (imageData, fileName) {
     var imageExtension = imageData.split(';')[0].split('/');
     imageExtension = imageExtension[imageExtension.length - 1];
@@ -9,10 +10,18 @@ angular.module('burgessOrchards')
       imageName: fileName,
       imageBody: imageData,
       imageExtension: imageExtension,
-      userEmail: 'abc@usa.com'
-    }
+      userEmail: 'clark@burgessOrchards.com'
+    };
+// console.log("Service New Image Hit", newImage);
+    return $http({
+      method: 'POST',
+      url: '/newimage',
+      data: newImage
+    });
 
-    return $http.post('/api/newimage', newImage)
-  }
+// console.log("Newimage hit 2", newImage);
+    // .post('/api/newimage', newImage)
+  };
+
   return service;
 });

@@ -20,7 +20,7 @@ var app = express();
 // INITILIZE DEPENDENCIES
 // ============================================================
 app.use(cors());
-app.use(bodyParser.json({link: '50mb'}));
+app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use(express.static(__dirname+'./../public'));
 
@@ -42,7 +42,7 @@ app.delete('/contacts/:id', contactsCtrl.delete);
 
 // IMAGES ENDPOINTS
 // ============================================================
-// app.post('/newimage', imageCtrl.addImage);
+app.post('/newimage', imageCtrl.saveImage);
 
 // VARIABLES
 // ============================================================
