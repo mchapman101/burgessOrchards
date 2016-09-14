@@ -34,7 +34,7 @@ exports.saveImage = function (req, res) {
   };
 
   s3.upload(params, function(err, data) {
-      // console.log('THIS IS AN ERROR', err, 'THIS IS THE DATA', data);
+      console.log('THIS IS AN ERROR', err, 'THIS IS THE DATA', data);
       if (err) return res.status(500).send(err);
       res.status(200).json(data);
       console.log("data return hit", data); //save data to database?
