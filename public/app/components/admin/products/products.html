@@ -1,25 +1,33 @@
 <section class="container">
 
 
-<div class="row">
-  <button type="button" class="btn btn-lg btn-success respBtn pull-right addButton" ng-click="addModal()">Add New Product</button>
-</div>
+    <div class="row">
+        <button type="button" class="btn btn-lg btn-success respBtn pull-right addButton" ng-click="addModal()">Add New Product</button>
+    </div>
 
-<div class="row">
+    <div class="row">
 
-  <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="fruit in fruits | orderBy: 'name'">
-    <div class="panel panel-default fruit-panel ">
-     <div class="panel-heading"><img class="img-responsive fruit-img"ng-src="assets/img/{{fruit.img}}" alt="" /></div>
-     <div class="panel-body fruit-panel-body form-group" >
-       <h3><input type="text" ng-model="fruit.name" class="borderless"></h3></input>
-       <p><textarea class="form-control fruitDesc borderless" ng-model="fruit.description" rows="6"></textarea></p>
-     </div>
-     <div class="panel-footer">
-       <button class="btn btn-lg btn-primary" ng-click="updateProduct(fruit)">Update</button>
-       <button class="btn btn-lg btn-danger" ng-click="deleteProduct(fruit)" confirm="Are you sure?">Delete</button></div>
-   </div>
- </div>
-</div>
+        <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="fruit in fruits | orderBy: 'name'">
+            <div class="panel panel-default fruit-panel ">
+                <div class="panel-heading">
+                    <div class="image-upload" ng-click="selectFruit(fruit)">
+                        <label for="{{'file-input'+fruit.id}}">
+                          <img class="img-responsive fruit-img" ng-src="{{fruit.img}}"  alt="" />
+                        </label>
+                      </div>
+                        <input id="{{'file-input'+fruit.id}}" type="file" fileupdate accept="image/*" style="display: none;" fruit="fruit"/>
+                    </div>
+
+                    <div class="panel-body fruit-panel-body form-group">
+                        <h3><input type="text" ng-model="fruit.name" class="borderless"></h3></input>
+                        <p><textarea class="form-control fruitDesc borderless" ng-model="fruit.description" rows="6"></textarea></p>
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-lg btn-primary" ng-click="updateProduct(fruit)">Update</button>
+                        <button class="btn btn-lg btn-danger" ng-click="deleteProduct(fruit)" confirm="Are you sure?">Delete</button></div>
+                </div>
+            </div>
+        </div>
 
 
 </section>

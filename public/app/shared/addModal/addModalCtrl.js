@@ -4,8 +4,7 @@ angular.module("burgessOrchards").controller("addModalCtrl", function($scope, $s
 
   // VARIABLES
   // ============================================================
-
-
+$scope.images = [];
   // FUNCTIONS
   // ============================================================
 

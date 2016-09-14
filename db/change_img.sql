@@ -1,0 +1,2 @@
+UPDATE fruit
+SET img = 
