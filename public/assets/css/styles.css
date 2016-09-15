@@ -7,190 +7,191 @@ www.markalanchapman.com
 
 /***General Styles ***/
 
+
 /** {
   font-size: 1.3em;
 }*/
+
 
 /*body {
   padding: 0 50px 0 50px;
 }*/
 
+
 /*********** MEDIA QUERIES ************/
 
 @media all and (max-width:480px) {
-   .respBtn {
-     width: 100%;
-     display:block;
-     margin: 20px 0 20px 0 !important;
-   }
+    .respBtn {
+        width: 100%;
+        display: block;
+        margin: 20px 0 20px 0 !important;
+    }
 }
 
-
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 a:hover {
-color: #339966;
-text-decoration: none;
+    color: #339966;
+    text-decoration: none;
 }
 
 a:focus {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 a:visited {
-  color: none;
+    color: none;
 }
 
 ul, ol {
-  list-style: none;
+    list-style: none;
 }
 
 .nav, .pagination, .carousel, .panel-title a {
-  cursor: pointer;
- }
+    cursor: pointer;
+}
 
 
 /*-----------------Header Styles -----------------*/
 
 .logo {
-  max-height: 150px;
+    max-height: 150px;
 }
 
-
-
 .call-to-action {
-  text-transform: uppercase;
-  text-align: center;
-  background-color: #FF6633;
-  color: #FFF;
-  padding: 10px;
-  cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #FF6633;
+    color: #FFF;
+    padding: 10px;
+    cursor: pointer;
 }
 
 
 /*-----------------NavTab Styles -----------------*/
 
 .navtab {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .navtab {
-  color: rgba(51, 153, 102, 0.5);
-  text-align: center;
+    color: rgba(51, 153, 102, 0.5);
+    text-align: center;
 }
 
 .activeState {
-  color: #339966;
-  border-bottom: 10px solid #339966
+    color: #339966;
+    border-bottom: 10px solid #339966
 }
+
 
 /*---------------Home View-------------------*/
 
 .carousel {
-max-height: 60vh;
-overflow: hidden;
+    max-height: 60vh;
+    overflow: hidden;
 }
 
-.carouselImg {
-  width: 100%;
-  height: auto;
-}
 
 .bg-grey {
-  background-color: #EEEEEE;
+    background-color: #EEEEEE;
 }
 
 .contact-section {
-  padding-bottom: 1em;
+    padding-bottom: 1em;
 }
 
 #map {
-  height:420px;
-  /*margin-bottom: 30px;*/
-  width: 100%;
-  padding: 0;
+    height: 420px;
+    /*margin-bottom: 30px;*/
+    width: 100%;
+    padding: 0;
 }
+
+
 /*-----carousel flash fix -----*/
 
 
 /*---------------Fruit View------------------*/
 
 .fruit-nav {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .fruit-panel {
-  min-height: 566px;
-  overflow: auto;
+    min-height: 566px;
+    overflow: auto;
 }
 
 .fruit-panel-body {
-  min-height: 300px;
+    min-height: 300px;
 }
 
 .fruit-img {
-  margin: auto;
+    margin: auto;
 }
 
 .fruit-btn-container {
-  display: flex;
+    display: flex;
 }
 
 .fruit-btn {
-  position: absolute;
-  bottom: 35px;
+    position: absolute;
+    bottom: 35px;
 }
 
 .fruitActiveState {
-  color: red;
+    color: red;
 }
 
+
 /*---------------Admin------------------*/
+
 .email-search {
-  margin-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 .borderless {
-  border: none;
-  background: transparent;
+    border: none;
+    background: transparent;
 }
 
 .fruitDesc {
-  height: 200px !important;
-  resize: none;
-  border-style: none;
-  border-color: transparent;
-  overflow: auto;
+    height: 200px !important;
+    resize: none;
+    border-style: none;
+    border-color: transparent;
+    overflow: auto;
 }
 
 .addButton {
-  float: right;
-  margin: 20px;
+    float: right;
+    margin: 20px;
 }
 
 
 /*---------------Footer------------------*/
 
 .footer {
-  background-color: #339966;
-  color: white;
-  padding-top: 30px;
+    background-color: #339966;
+    color: white;
+    padding-top: 30px;
 }
 
 .social-links {
-  margin-bottom: 20px;
-  margin: auto;
+    margin-bottom: 20px;
+    margin: auto;
 }
 
 .fa {
-  color: white;
-  height: 40px;
-  width: 40px;
-  font-size: 29px;
+    color: white;
+    height: 40px;
+    width: 40px;
+    font-size: 29px;
 }
 
 .copyright {
-  margin-top: 20px;
+    margin-top: 20px;
 }

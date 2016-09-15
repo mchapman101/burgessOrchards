@@ -5,7 +5,7 @@ angular.module("burgessOrchards").controller("homeCtrl", function($scope) {
   // VARIABLES
   // ============================================================
 
-  $scope.myInterval = 60000;
+  $scope.myInterval = 6000;
     $scope.noWrapSlides = false;
     $scope.active = 0;
     $scope.slides = [
@@ -25,6 +25,19 @@ angular.module("burgessOrchards").controller("homeCtrl", function($scope) {
         image: "../assets/img/carousel/04.jpg",
         id: "04"
       },
+      {
+        image: "../assets/img/carousel/05.jpg",
+        id: "05"
+      },
+      {
+        image: "../assets/img/carousel/06.jpg",
+        id: "06"
+      },
+      {
+        image: "../assets/img/carousel/07.jpg",
+        id: "07"
+      },
+
     ];
     var currIndex = 0;
 

@@ -1,71 +1,67 @@
 <section>
 
-<!-- MY VERSION -->
-  <div class="row">
-    <div class = "carousel col-lg-12" >
-      <uib-carousel active="active" interval="myInterval" no-transition="true" no-wrap="noWrapSlides">
-        <uib-slide ng-repeat="slide in slides " index="$index">
-          <img ng-src="{{slide.image}}" class="img-responsive center-block carouselImg">
-          </div>
+    <!-- MY VERSION -->
+    <div class="row">
+        <div class="carousel col-lg-12">
+            <uib-carousel active="active" interval="myInterval" no-transition="true" no-wrap="noWrapSlides">
+                <uib-slide ng-repeat="slide in slides " index="$index">
+                    <img ng-src="{{slide.image}}" class="">
+        </div>
         </uib-slide>
-      </uib-carousel>
+        </uib-carousel>
     </div>
-  </div>
-
-<div class="intro container">
-
-  <div class="intro row">
-    <div class="col-xs-12">
-      <h1 class="text-center">Welcome to Burgess Orchards</h1>
     </div>
 
-  </div>
-  <div class="intro-body">
-    <p class="lead">Alas, Alas PEACH SEASON is here:
-As of August 15th, 2016 the Burgess Orchard Fruit Stand will be open!
-<br>
-<strong>Monday – Saturday, 9am – 6pm.</strong>
-<br>
-We had a HUGE crop this year. We worked really hard on thinning each tree and didn’t get the size we wanted, but they’re delicious all the same.
-Be sure to take advantage of our new PRE-ORDER system and we will send you a confirmation to pick up your order when the varieties become available!
-Also, join our email list and never miss out on your favorite peaches.
-Our apples are about a month away! We are expecting our Gala apples first and shortly after our mouthwatering Honey Crisps. We also have Fuji apples.
-Come get your peaches!
-‘Like’ us on Facebook and follow us on Instagram to keep up-to-date on all the news. We will be sending out information daily during picking season using our Facebook, Twitter, and Instagram accounts so make sure to keep in touch with us on social media.</p>
-  </div>
-</div>
+    <div class="intro container">
 
-<div class="container bg-grey contact-section">
-  <h2 class="text-center">CONTACT</h2>
-  <div class="row">
-    <div class="col-sm-5">
-      <p>Contact Us! Let us know!</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> 645 S. Alpine Hwy Alpine, UT 84004 </p>
-      <p><span class="glyphicon glyphicon-phone"></span> 801-554-6317</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> burgess@burgessOrchards.com</p>
-    </div>
-    <div class="col-sm-7">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        <div class="intro row">
+            <div class="col-xs-12">
+                <h1 class="text-center">Welcome to Burgess Orchards</h1>
+            </div>
+
         </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        <div class="intro-body">
+            <p class="lead">Alas, Alas PEACH SEASON is here: As of August 15th, 2016 the Burgess Orchard Fruit Stand will be open!
+                <br>
+                <strong>Monday – Saturday, 9am – 6pm.</strong>
+                <br> We had a HUGE crop this year. We worked really hard on thinning each tree and didn’t get the size we wanted, but they’re delicious all the same. Be sure to take advantage of our new PRE-ORDER system and we will send you a confirmation
+                to pick up your order when the varieties become available! Also, join our email list and never miss out on your favorite peaches. Our apples are about a month away! We are expecting our Gala apples first and shortly after our mouthwatering
+                Honey Crisps. We also have Fuji apples. Come get your peaches! ‘Like’ us on Facebook and follow us on Instagram to keep up-to-date on all the news. We will be sending out information daily during picking season using our Facebook, Twitter,
+                and Instagram accounts so make sure to keep in touch with us on social media.</p>
         </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
-        </div>
-      </div>
     </div>
-  </div>
-</div>
 
-<!-- <hr/> -->
+    <div class="container bg-grey contact-section">
+        <h2 class="text-center">CONTACT</h2>
+        <div class="row">
+            <div class="col-sm-5">
+                <p>Contact Us! Let us know!</p>
+                <p><span class="glyphicon glyphicon-map-marker"></span> 645 S. Alpine Hwy Alpine, UT 84004 </p>
+                <p><span class="glyphicon glyphicon-phone"></span> 801-554-6317</p>
+                <p><span class="glyphicon glyphicon-envelope"></span> burgess@burgessOrchards.com</p>
+            </div>
+            <div class="col-sm-7">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                    </div>
+                </div>
+                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <button class="btn btn-default pull-right" type="submit">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-      <google-map></google-map>
+    <!-- <hr/> -->
+
+    <google-map></google-map>
 
 
 </section>
