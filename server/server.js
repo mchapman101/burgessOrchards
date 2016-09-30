@@ -15,11 +15,6 @@ var contactsCtrl = require('./backendCtrls/contactsCtrl');
 var imageCtrl = require('./backendCtrls/imageCtrl');
 var userCtrl = require('./backendCtrls/userCtrl');
 
-
-// INITILIZE APP
-// ============================================================
-var app = express();
-
 // INITILIZE SERVICES
 // ============================================================
 var passport = require('./middleware/passport');
@@ -31,7 +26,9 @@ var isAuthed = function(req, res, next) {
   return next();
 };
 
-
+// INITILIZE APP
+// ============================================================
+var app = express();
 
 // INITILIZE DEPENDENCIES
 // ============================================================
@@ -72,7 +69,11 @@ app.post('/newimage', imageCtrl.saveImage);
 
 // LOGIN ENDPOINTS
 // ============================================================
-app.post('/user/login', userCtrl.login);
+app.post('/login', passport.authenticate('local', {
+  successRedirect: '/me'
+}));
+app.get('/me', isAuthed, userCtrl.me);
+
 
 // VARIABLES
 // ============================================================
