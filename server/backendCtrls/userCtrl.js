@@ -7,14 +7,16 @@ var db = Massive.connectSync({
 // ============================================================
 module.exports = {
 
-  login: function(){
-
-  },
-
-  me: function(req, res, next){
+  ReadMe: function(req, res, next){
     if (!req.user) return res.status(401).send('Current User Not Defined!');
-    req.user.password = null;
-    return res.status(200).json(req.user);
+    db.users.findOne({id: req.params.id}, function(err, result){
+      if (err) {
+        res.status(500).send(err);
+      } else {
+        req.user.password = null;
+        return res.status(200).json(req.user);
+      }
+    });
   },
 
 

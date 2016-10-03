@@ -1,30 +1,43 @@
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
+var Massive = require('massive');
+var db = Massive.connectSync({
+    db: 'burgessorchards'
+});
+
+
 // var User = require('../models/userSchema');
 
 
 passport.use(new LocalStrategy({
-  usernameField: 'email',
+  usernameField: 'username',
   passwordField: 'password'
-}, function(email, password, done) {
+}, function(username, password, done) {
 
-  User.findOne({ email: email })
-  .exec(function(err, user) {
-    if(err) done(err);
-    if(!user) return done(null, false);
-    if(user.verifyPassword(password)) return done(null, user);
-    return done(null, false);
-  });
+  db.users.findOne({username: username}, function(err, user){
+    if (err)
+      return done(err);
+  })
+  console.log(username, password)
+
+
+  // User.findOne({ email: email })
+  // .exec(function(err, user) {
+  //   if(err) done(err);
+  //   if(!user) return done(null, false);
+  //   if(user.verifyPassword(password)) return done(null, user);
+  //   return done(null, false);
+  // });
 }));
 
 passport.serializeUser(function(user, done) {
   done(null, user._id);
 });
 passport.deserializeUser(function(_id, done) {
-  User.findById(_id, function(err, user) {
-    done(err, user);
-  });
+  // User.findById(_id, function(err, user) {
+  //   done(err, user);
+  // });
 });
 
 module.exports = passport;

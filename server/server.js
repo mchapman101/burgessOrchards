@@ -72,7 +72,7 @@ app.post('/newimage', imageCtrl.saveImage);
 app.post('/login', passport.authenticate('local', {
   successRedirect: '/me'
 }));
-app.get('/me', isAuthed, userCtrl.me);
+app.get('/me', isAuthed, userCtrl.ReadMe);
 
 
 // VARIABLES
