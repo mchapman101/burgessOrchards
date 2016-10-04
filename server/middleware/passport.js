@@ -18,8 +18,13 @@ passport.use(new LocalStrategy({
   db.users.findOne({username: username}, function(err, user){
     if (err)
       return done(err);
-  })
-  console.log(username, password)
+    console.log(user, "loging user?");
+      if(!user) return done(null, false);
+        if(user.password === password) return done(null, user);
+      return done(null, false);
+
+
+  });
 
 
   // User.findOne({ email: email })
@@ -32,12 +37,12 @@ passport.use(new LocalStrategy({
 }));
 
 passport.serializeUser(function(user, done) {
-  done(null, user._id);
+  done(null, user.id);
 });
-passport.deserializeUser(function(_id, done) {
-  // User.findById(_id, function(err, user) {
-  //   done(err, user);
-  // });
+passport.deserializeUser(function(id, done) {
+  db.users.findOne({id: id}, function(err, user) {
+    done(err, user);
+  });
 });
 
 module.exports = passport;
