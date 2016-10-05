@@ -16,4 +16,8 @@ $scope.submitContact = function(contact){
   });
 };
 
+$scope.cancelSignup = function(){
+  $uibModalInstance.dismiss();
+};
+
 });
