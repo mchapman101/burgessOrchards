@@ -17,7 +17,7 @@ angular.module("burgessOrchards").service("emailService", function($http) {
   this.sendBulkEmail = function(data) {
     return $http({
       method: 'POST',
-      url: '/bulkMail',
+      url: '/bulk-email',
       data: data
     }).then(function(response){
       return response.date;

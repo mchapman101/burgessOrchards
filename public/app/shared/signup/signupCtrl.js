@@ -1,6 +1,6 @@
 // INITILIZE CONTROLLER
 // ============================================================
-angular.module("burgessOrchards").controller("signupCtrl", function($scope, emailService, $uibModalInstance) {
+angular.module("burgessOrchards").controller("signupCtrl", function($scope, contactService, $uibModalInstance) {
 
   // VARIABLES
   // ============================================================
@@ -10,7 +10,7 @@ angular.module("burgessOrchards").controller("signupCtrl", function($scope, emai
   // ============================================================
 
 $scope.submitContact = function(contact){
-  emailService.createEmail(contact).then(function(response){
+  contactService.createEmail(contact).then(function(response){
     $scope.contact = "";
     $uibModalInstance.dismiss();
   });

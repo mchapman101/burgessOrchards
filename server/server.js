@@ -79,6 +79,7 @@ app.get('/me', isAuthed, userCtrl.ReadMe);
 // EMAILING ENDPOINTS
 // ============================================================
 app.post('/contact-form', emailCtrl.sendEmail);
+app.post('/bulk-email', emailCtrl.sendBulkEmail);
 
 
 
