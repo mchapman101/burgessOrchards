@@ -1,6 +1,6 @@
 // INITILIZE CONTROLLER
 // ============================================================
-angular.module("burgessOrchards").controller("homeCtrl", function($scope) {
+angular.module("burgessOrchards").controller("homeCtrl", function($scope, emailService) {
 
   // VARIABLES
   // ============================================================
@@ -44,5 +44,11 @@ angular.module("burgessOrchards").controller("homeCtrl", function($scope) {
   // FUNCTIONS
   // ============================================================
 
+$scope.sendEmail = function(data){
+  console.log(data);
+  emailService.sendEmail(data).then(function(response){
+    $scope.cf = "";
+  });
+};
 
 });

@@ -40,21 +40,27 @@
                 <p><span class="glyphicon glyphicon-phone"></span> 801-554-6317</p>
                 <p><span class="glyphicon glyphicon-envelope"></span> burgessorchards@gmail.com</p>
             </div>
+
+            <!-- Contact Form -->
             <div class="col-sm-7">
                 <div class="row">
+                  <form name="contactForm" ng-submit="cf.sendEmail()">
+
                     <div class="col-sm-6 form-group">
-                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required ng-model="cf.contactName">
                     </div>
                     <div class="col-sm-6 form-group">
-                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required ng-model="cf.contactEmail">
                     </div>
                 </div>
-                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5" ng-model="cf.contactMsg"></textarea><br>
                 <div class="row">
                     <div class="col-sm-12 form-group">
-                        <button class="btn btn-default pull-right" type="submit">Send</button>
+                        <button class="btn btn-default pull-right" type="submit" ng-click="sendEmail(cf)">Send</button>
                     </div>
                 </div>
+              </form>
+
             </div>
         </div>
     </div>

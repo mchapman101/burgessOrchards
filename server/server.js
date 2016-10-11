@@ -14,6 +14,8 @@ var fruitCtrl = require('./backendCtrls/fruitCtrl');
 var contactsCtrl = require('./backendCtrls/contactsCtrl');
 var imageCtrl = require('./backendCtrls/imageCtrl');
 var userCtrl = require('./backendCtrls/userCtrl');
+var emailCtrl = require('./backendCtrls/emailCtrl');
+
 
 // INITILIZE SERVICES
 // ============================================================
@@ -73,6 +75,12 @@ app.post('/login', passport.authenticate('local', {
   successRedirect: '/me'
 }));
 app.get('/me', isAuthed, userCtrl.ReadMe);
+
+// EMAILING ENDPOINTS
+// ============================================================
+app.post('/contact-form', emailCtrl.sendEmail);
+app.post('/bulk-email', emailCtrl.sendBulkEmail);
+
 
 
 // VARIABLES

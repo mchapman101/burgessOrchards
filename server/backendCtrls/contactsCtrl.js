@@ -15,7 +15,8 @@ module.exports = {
     },
 
     create: function(req, res) {
-        db.create_contact(req.body.firstname, req.body.lastname, req.body.email, function(err, result) {
+      var data = req.body;
+        db.create_contact(data.firstname, data.lastname, data.email, function(err, result) {
             if (err) {
                 res.status(500).send(err);
             }
