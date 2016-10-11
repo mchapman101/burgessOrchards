@@ -5,9 +5,11 @@ var db = Massive.connectSync({
 });
 
 var nodemailer = require('nodemailer');
-var transporter = nodemailer.createTransport();
+var sesTransport = require('nodemailer-ses-transport');
 var config = require('../config.js');
-var contactEmail = [];
+
+var transporter = nodemailer.createTransport();
+
 
 module.exports = {
 
@@ -18,33 +20,46 @@ module.exports = {
             to: config.cfClientEmail,
             subject: "Message from " + data.contactName,
             text: data.contactMsg
+        }, function(error, info){
+          if(error) {
+            return console.log(error);
+          }
+          console.log('Message sent: ' + info.response);
         });
         if (err) {
-            res.status(500).json(err);
+            res.status(500).send(err);
         }
-        res.status(200).json(res);
+        res.status(200).send("Sent");
     },
 
     sendBulkEmail: function(req, res, err) {
         var data = req.body;
-        console.log("req.body Logging", req.body);
+        var contactEmail = [];
         db.get_contact_email(function(err, result) {
-          console.log(result, "RESULDFJSDF!");
-          for (var i = 0; i < result.length; i++) {
-            contactEmail.push(result[i].email);
-          }
-          console.log(contactEmail, "Contact emails?");
+            for (var i = 0; i < result.length; i++) {
+                contactEmail.push(result[i].email);
+            }
+            console.log("Logging this!", contactEmail);
+            transporter.sendMail({
+                from: "burgess@burgessorchards.com",
+                to: contactEmail,
+                subject: "A Message from Burgess Orchards!",
+                text: data.msg
+            }, function(error, info){
+              if(error) {
+                return console.log(error);
+              }
+              console.log('Message sent: ' + info.response);
+            });
+            if (err) {
+                res.status(500).send(err);
+            }
+            console.log("Log this at last", contactEmail, data.msg);
+            res.status(200).send("Sent");
+
         });
 
-      transporter.sendMail({
-          from: "Burgess Orchards",
-          to: contactEmail,
-          subject: "A Message from Burgess Orchards!",
-          text: data.msg
-      });
-      if (err) {
-          res.status(500).json(err);
-      }
-        res.status(200).json(res);
+        console.log("Logging all the Emails!", contactEmail);
+
     }
 };
