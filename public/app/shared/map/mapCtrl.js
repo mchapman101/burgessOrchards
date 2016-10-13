@@ -38,6 +38,14 @@ angular.module("burgessOrchards").controller("mapCtrl", function($scope) {
         content: "Burgess Orchards"
     });
 
+    var infowindow = new google.maps.InfoWindow({
+      content: "<h1>Burgess Orchards</h1>"
+    });
+
+    marker.addListener('click', function(){
+      infowindow.open(map, marker);
+    });
+
 
 
 });
