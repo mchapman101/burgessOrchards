@@ -60,6 +60,10 @@ ul, ol {
     max-height: 150px;
 }
 
+.logo-sm {
+  max-height: 75px;
+}
+
 .call-to-action {
     text-transform: uppercase;
     text-align: center;
@@ -92,6 +96,7 @@ ul, ol {
 .carousel {
     max-height: 60vh;
     overflow: hidden;
+    margin-bottom: 40px;
 }
 
 
@@ -104,7 +109,7 @@ ul, ol {
 }
 
 #map {
-    height: 420px;
+    height: 500px;
     /*margin-bottom: 30px;*/
     width: 100%;
     padding: 0;
