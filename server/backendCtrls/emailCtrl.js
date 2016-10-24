@@ -14,6 +14,7 @@ var transporter = nodemailer.createTransport();
 module.exports = {
 
     sendEmail: function(req, res, err) {
+      console.log("HIT 005");
         var data = req.body;
         transporter.sendMail({
             from: data.contactEmail,
@@ -24,12 +25,10 @@ module.exports = {
           if(error) {
             return console.log(error);
           }
-          console.log('Message sent: ' + info.response);
+          console.log('Message sent: ' + info);
+          res.status(200).send("Sent");
         });
-        if (err) {
-            res.status(500).send(err);
-        }
-        res.status(200).send("Sent");
+
     },
 
     sendBulkEmail: function(req, res, err) {
@@ -52,7 +51,7 @@ module.exports = {
               console.log('Message sent: ' + info.response);
             });
             if (err) {
-                res.status(500).send(err);
+                return res.status(500).send(err);
             }
             console.log("Log this at last", contactEmail, data.msg);
             res.status(200).send("Sent");

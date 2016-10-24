@@ -41,7 +41,7 @@ angular.module("burgessOrchards").controller("mapCtrl", function($scope) {
     var infowindow = new google.maps.InfoWindow({
       content: "<div>"+
       "<img src='assets/img/burgess_orchards_logo-01.png' class='img-responsive center-block logo-sm '></img>"+
-    "<h5><span class='glyphicon glyphicon-map-marker'></span> 645 S. Alpine Hwy Alpine, UT 84004 </h5>"+
+    "<h5>645 S. Alpine Hwy Alpine, UT 84004 </h5>"+
       "</div>",
       maxWidth: 250
 

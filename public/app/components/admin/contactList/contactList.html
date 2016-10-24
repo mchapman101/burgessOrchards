@@ -8,21 +8,23 @@
         </div>
     </div>
     <div class="row">
-        <button type="button" name="button" class="btn btn-lg btn-primary" ng-click="openBulkModal('lg')">Send Bulk Mail</button>
+        <button type="button" name="button" class="btn btn-lg btn-primary bulk-mail-btn respBtn" ng-click="openBulkModal('lg')">Send Bulk Mail</button>
     </div>
 
     <div class="row">
 
-        <div class="list-group col-xs-12 col-sm-6" ng-repeat="email in emails | orderBy: 'lastname' | filter: emailFilter">
-            <div class="list-group-item form-group">
-                <form ng-submit="updateContact(email)">
+        <div class="list-group col-xs-12 col-sm-6 list-fix" ng-repeat="email in emails | orderBy: 'lastname' | filter: emailFilter">
+
+            <div class="list-group-item form-group contact-list">
+                <form class="form-horizontal" ng-submit="updateContact(email)">
+
 
                     <h3><input type="text"
-                ng-model="email.firstname" class="list-group-item borderless"></input></h3>
+                ng-model="email.firstname" class="list-group-item  form-control font-fix borderless "></input></h3>
 
-                    <h3><input type="text" ng-model="email.lastname" class="list-group-item borderless"></input></h3>
+                    <h3><input type="text" ng-model="email.lastname" class="list-group-item font-fix form-control borderless "></input></h3>
 
-                    <h3><input type="email" ng-model="email.email" class="list-group-item borderless"></input></h3>
+                    <h3><input type="email" ng-model="email.email" class="list-group-item font-fix form-control borderless"></input></h3>
 
                     <button type="button" class="btn btn-primary " ng-click="updateContact(email); updateAlert('success', 'Updated', '1000')">Update</button>
                     <button type="button" class="btn btn-danger " ng-click="deleteContact(email)" confirm="Are you sure?">Delete</button>

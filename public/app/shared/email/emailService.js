@@ -10,6 +10,7 @@ angular.module("burgessOrchards").service("emailService", function($http) {
       url: '/contact-form',
       data: data
     }).then(function(response) {
+      console.log("Second to Last Hit", response);
       return response.data;
     });
   };

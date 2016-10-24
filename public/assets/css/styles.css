@@ -26,6 +26,11 @@ www.markalanchapman.com
         display: block;
         margin: 20px 0 20px 0 !important;
     }
+
+    .list-fix {
+      padding-left: 15px !important;
+    }
+
 }
 
 a {
@@ -104,8 +109,20 @@ ul, ol {
     background-color: #EEEEEE;
 }
 
+.title-copy{
+  margin-bottom: 40px;
+}
+
+.main-copy {
+  margin-bottom: 80px;
+}
+
 .contact-section {
-    padding-bottom: 1em;
+    padding: 1em 2em 2em 2em;
+}
+
+.contact-address {
+  padding-left: 20px;
 }
 
 #map {
@@ -157,6 +174,16 @@ ul, ol {
 .email-search {
     margin-bottom: 1em;
 }
+
+.bulk-mail-btn {
+  margin-bottom: 1em;
+}
+
+.font-fix{
+  font-size: 24px !important;
+}
+
+
 
 .borderless {
     border: none;

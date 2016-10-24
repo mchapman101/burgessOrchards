@@ -1,6 +1,6 @@
 // INITILIZE CONTROLLER
 // ============================================================
-angular.module("burgessOrchards").controller("homeCtrl", function($scope, emailService) {
+angular.module("burgessOrchards").controller("homeCtrl", function($scope, emailService, $state) {
 
   // VARIABLES
   // ============================================================
@@ -45,9 +45,16 @@ angular.module("burgessOrchards").controller("homeCtrl", function($scope, emailS
   // ============================================================
 
 $scope.sendEmail = function(data){
-  console.log(data);
+  console.log("HIT 001", data);
   emailService.sendEmail(data).then(function(response){
-    $scope.cf = "";
+    console.log("hit 00LAST");
+    $scope.cf = {
+      contactName: null,
+      contactEmail: null,
+      contactMsg: null
+    };
+    $scope.contactForm.$setPristine();
+
   });
 };
 

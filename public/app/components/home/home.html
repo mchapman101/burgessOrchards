@@ -14,13 +14,13 @@
 
     <div class="intro container">
 
-        <div class="intro row">
+        <div class="intro row title-copy">
             <div class="col-xs-12">
                 <h1 class="text-center">Welcome to Burgess Orchards</h1>
             </div>
 
         </div>
-        <div class="intro-body">
+        <div class="intro-body main-copy">
             <p class="lead">Alas, Alas PEACH SEASON is here: As of August 15th, 2016 the Burgess Orchard Fruit Stand will be open!
                 <br>
                 <strong>Monday – Saturday, 9am – 6pm.</strong>
@@ -32,9 +32,9 @@
     </div>
 
     <div class="container bg-grey contact-section">
-        <h2 class="text-center">CONTACT</h2>
+        <h2 class="text-center">CONTACT US</h2>
         <div class="row">
-            <div class="col-sm-5">
+            <div class="col-sm-4 text-left contact-address">
                 <p>Contact Us! Let us know!</p>
                 <p><span class="glyphicon glyphicon-map-marker"></span> 645 S. Alpine Hwy Alpine, UT 84004 </p>
                 <p><span class="glyphicon glyphicon-phone"></span> 801-554-6317</p>
@@ -42,24 +42,24 @@
             </div>
 
             <!-- Contact Form -->
-            <div class="col-sm-7">
+            <div class="col-sm-8">
                 <div class="row">
-                  <form name="contactForm" ng-submit="cf.sendEmail()">
+                    <form name="contactForm" ng-submit="cf.sendEmail()">
 
-                    <div class="col-sm-6 form-group">
-                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required ng-model="cf.contactName">
-                    </div>
-                    <div class="col-sm-6 form-group">
-                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required ng-model="cf.contactEmail">
-                    </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required ng-model="cf.contactName">
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required ng-model="cf.contactEmail">
+                        </div>
                 </div>
                 <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5" ng-model="cf.contactMsg"></textarea><br>
                 <div class="row">
                     <div class="col-sm-12 form-group">
-                        <button class="btn btn-default pull-right" type="submit" ng-click="sendEmail(cf)">Send</button>
+                        <button class="btn btn-lg btn-primary pull-right" type="submit" ng-click="sendEmail(cf)">  Send  </button>
                     </div>
                 </div>
-              </form>
+                </form>
 
             </div>
         </div>
