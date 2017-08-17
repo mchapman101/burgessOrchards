@@ -13,6 +13,7 @@ passport.use(new LocalStrategy({
   db.users.findOne({username: username}, function(err, user){
     if (err)
       return done(err);
+      console.log(user)
       if(!user) return done(null, false);
         if(user.password === password) {
           return done(null, user);
