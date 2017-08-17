@@ -4,7 +4,7 @@ var db = app.get('db');
 
 var nodemailer = require('nodemailer');
 var sesTransport = require('nodemailer-ses-transport');
-var config = require('../config.js');
+// var config = require('../config.js');
 
 var transporter = nodemailer.createTransport();
 
@@ -16,7 +16,7 @@ module.exports = {
         var data = req.body;
         transporter.sendMail({
             from: data.contactEmail,
-            to: config.cfClientEmail,
+            to: process.env.cfClientEmail,
             subject: "Message from " + data.contactName,
             text: data.contactMsg
         }, function(error, info){

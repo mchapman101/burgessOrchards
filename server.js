@@ -5,7 +5,7 @@ var cors = require('cors');
 var bodyParser = require('body-parser');
 var massive = require('massive');
 var session = require('express-session');
-var config = require('./server/config');
+// var config = require('./server/config');
 const connectionString = process.env.DATABASE_URL || 'postgres://postgres@localhost/burgess'
 var massiveInstance = massive.connectSync({connectionString: connectionString});
 
@@ -31,7 +31,7 @@ var db = app.get('db')
 app.use(express.static(__dirname+'/public'));
 
 app.use(session({
-  secret: config.passportSecret,
+  secret: process.env.passportSecret,
   saveUninitialized: false,
   resave:false
 }));
