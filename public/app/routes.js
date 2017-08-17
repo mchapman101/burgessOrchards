@@ -1,7 +1,8 @@
 // CONFIG
 // ============================================================
 angular.module("burgessOrchards").config(function($stateProvider, $urlRouterProvider) {
-
+  $urlRouterProvider.when("/fruit", "/fruit/peaches");
+  $urlRouterProvider.when("/admin", "/admin/contact-list");
   // INITILIZE STATES
   // ============================================================
   $stateProvider
@@ -21,9 +22,9 @@ angular.module("burgessOrchards").config(function($stateProvider, $urlRouterProv
       url: '/fruit',
       templateUrl: 'app/components/fruit/fruit.html',
       controller: 'fruitCtrl',
-      params: {
-        autoActivateChild: 'fruit.peaches'
-      }
+      // params: {
+      //   autoActivateChild: 'fruit.peaches'
+      // }
     })
     //--Fruit Nested Views--//
 
@@ -50,15 +51,21 @@ angular.module("burgessOrchards").config(function($stateProvider, $urlRouterProv
       controller: 'recipiesCtrl'
     })
 
-//-------Admin Nested Vies ------//
     .state('admin', {
       url: '/admin',
       templateUrl: 'app/components/admin/admin.html',
       controller: 'adminCtrl',
-      params: {
-        autoActivateChild: 'admin.email'
+      resolve: {
+        validate: function(routeSrvc, $location) {
+          routeSrvc.validateLogin().then(function(response) {
+             var isAdmin = response;
+             if(!isAdmin) $location.path('/');
+          });
+        }
       }
     })
+
+    //-------Admin Nested Views ------//
     .state('admin.email', {
       url: '/contact-list',
       templateUrl: 'app/components/admin/contactList/contactList.html',

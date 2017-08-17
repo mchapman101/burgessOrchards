@@ -1,7 +1,5 @@
-var Massive = require('massive');
-var db = Massive.connectSync({
-    db: 'burgessorchards'
-});
+const app = require('../../server.js');
+var db = app.get('db');
 
 // EXPORT METHODS
 // ============================================================
@@ -19,6 +17,7 @@ module.exports = {
     },
     peach: function(req, res) {
         db.get_all_peaches(function(err, result) {
+            console.log('error', err);
             if (err) {
                 res.status(500).send(err);
             }

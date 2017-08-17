@@ -1,8 +1,6 @@
 // Send and Email from the main page Contact Form
-var Massive = require('massive');
-var db = Massive.connectSync({
-    db: 'burgessorchards'
-});
+const app = require('../../server.js');
+var db = app.get('db');
 
 var nodemailer = require('nodemailer');
 var sesTransport = require('nodemailer-ses-transport');
