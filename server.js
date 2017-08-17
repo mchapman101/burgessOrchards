@@ -90,7 +90,7 @@ app.post('/bulk-email', emailCtrl.sendBulkEmail);
 
 // VARIABLES
 // ============================================================
-var port = process.env.port || 3000;
+var port = process.env.PORT || 3000;
 
 // LISTEN
 // ============================================================
