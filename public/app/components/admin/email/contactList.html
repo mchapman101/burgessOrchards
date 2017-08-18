@@ -9,7 +9,8 @@
     </div>
 
     <div class="row">
-      <button type="button" name="button" class="btn btn-lg btn-primary" ng-click="openBulkModal('lg')">Send Bulk Mail</button>
+      <button type="button" name="button" class="btn btn-lg btn-primary" disabled>Send Bulk Mail</button>
+      <!-- <button type="button" name="button" class="btn btn-lg btn-primary" ng-click="openBulkModal('lg')">Send Bulk Mail</button> -->
 
         <div class="list-group col-md-6">
             <div class="list-group-item form-group" ng-repeat="email in emails | orderBy: 'lastname' | filter: emailFilter">
