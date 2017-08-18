@@ -11,9 +11,9 @@ CREATE TABLE contacts (
   email TEXT
 );
 
-INSERT INTO contacts (id, first_name, last_name, email) VALUES (1, 'Bob', 'Smith', 'bsmith121@yahoooo.com');
-INSERT INTO contacts (id, first_name, last_name, email) VALUES (2, 'Sally', 'Rally', 'sallyrallydally@gmale.com');
-INSERT INTO contacts (id, first_name, last_name, email) VALUES (3, 'Dude', 'LikeNoWay', 'woah@woah.com');
+INSERT INTO contacts (first_name, last_name, email) VALUES ('Bob', 'Smith', 'bsmith121@yahoooo.com');
+INSERT INTO contacts (first_name, last_name, email) VALUES ('Sally', 'Rally', 'sallyrallydally@gmale.com');
+INSERT INTO contacts (first_name, last_name, email) VALUES ('Dude', 'LikeNoWay', 'woah@woah.com');
 
 CREATE TABLE fruit (
   id SERIAL PRIMARY KEY,
