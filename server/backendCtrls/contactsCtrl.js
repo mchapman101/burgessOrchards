@@ -1,7 +1,5 @@
-var Massive = require('massive');
-var db = Massive.connectSync({
-    db: 'burgessorchards'
-});
+const app = require('../../server.js');
+var db = app.get('db');
 
 module.exports = {
 
@@ -18,6 +16,7 @@ module.exports = {
       var data = req.body;
         db.create_contact(data.firstname, data.lastname, data.email, function(err, result) {
             if (err) {
+              console.log(err)
                 res.status(500).send(err);
             }
             res.status(200).send(result);
@@ -27,8 +26,8 @@ module.exports = {
     update: function(req, res) {
         db.contacts.update({
             id: req.params.id,
-            firstname: req.body.firstname,
-            lastname: req.body.lastname,
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
             email: req.body.email
         }, function(err, result) {
             if (err) {

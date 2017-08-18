@@ -1,7 +1,5 @@
-var Massive = require('massive');
-var db = Massive.connectSync({
-    db: 'burgessorchards'
-});
+const app = require('../../server.js');
+var db = app.get('db');
 
 // EXPORT METHODS
 // ============================================================

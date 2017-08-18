@@ -1,16 +1,14 @@
-var Massive = require('massive');
-var db = Massive.connectSync({
-    db: 'burgessorchards'
-});
+const app = require('../../server.js');
+var db = app.get('db');
 
 var AWS = require('aws-sdk');
-var Keys = require('../config.js');
+// var Keys = require('../config.js');
 
 // Hard amazon aws config
 AWS.config.update({
-    accessKeyId: Keys.amazonAccess,
-    secretAccessKey: Keys.amazonSecret,
-    region: Keys.amazonRegion
+    accessKeyId: process.env.amazonAccess,
+    secretAccessKey: process.env.amazonSecret,
+    region: process.env.amazonRegion
 });
 
 var s3 = new AWS.S3();

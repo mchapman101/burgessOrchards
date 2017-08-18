@@ -1,3 +1,3 @@
 insert into contacts
-  (firstName, lastName, email)
+  (first_name, last_name, email)
   values ($1, $2, $3);

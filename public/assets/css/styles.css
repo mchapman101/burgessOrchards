@@ -143,12 +143,12 @@ ul, ol {
 }
 
 .fruit-panel {
-    min-height: 566px;
+    min-height: 250px;
     overflow: auto;
 }
 
 .fruit-panel-body {
-    min-height: 300px;
+    min-height: 275px;
 }
 
 .fruit-img {
