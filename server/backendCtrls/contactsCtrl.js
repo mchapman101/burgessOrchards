@@ -26,8 +26,8 @@ module.exports = {
     update: function(req, res) {
         db.contacts.update({
             id: req.params.id,
-            firstname: req.body.firstname,
-            lastname: req.body.lastname,
+            first_name: req.body.firstname,
+            last_name: req.body.lastname,
             email: req.body.email
         }, function(err, result) {
             if (err) {
